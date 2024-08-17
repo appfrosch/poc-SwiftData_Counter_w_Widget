@@ -21,6 +21,7 @@
 		CD51AF562C708068007CE0B9 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CD51AF582C70806A007CE0B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD51AF5B2C70806A007CE0B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD51AF622C70818A007CE0B9 /* poc-SwiftData_Counter_w_Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "poc-SwiftData_Counter_w_Widget.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 		CD51AF512C708068007CE0B9 /* poc-SwiftData_Counter_w_Widget */ = {
 			isa = PBXGroup;
 			children = (
+				CD51AF622C70818A007CE0B9 /* poc-SwiftData_Counter_w_Widget.entitlements */,
 				CD51AF522C708068007CE0B9 /* poc_SwiftData_Counter_w_WidgetApp.swift */,
 				CD51AF542C708068007CE0B9 /* ContentView.swift */,
 				CD51AF562C708068007CE0B9 /* Item.swift */,
@@ -273,6 +275,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "poc-SwiftData_Counter_w_Widget/poc-SwiftData_Counter_w_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"poc-SwiftData_Counter_w_Widget/Preview Content\"";
@@ -302,6 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "poc-SwiftData_Counter_w_Widget/poc-SwiftData_Counter_w_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"poc-SwiftData_Counter_w_Widget/Preview Content\"";
