@@ -10,9 +10,24 @@ import SwiftData
 
 @Model
 final class Item {
-    var timestamp: Date
-    
-    init(timestamp: Date) {
-        self.timestamp = timestamp
+  private var _timestamp: Date?
+
+  init(
+    timestamp: Date
+  ) {
+    self._timestamp = timestamp
+  }
+
+  var timestamp: Date {
+    get {
+      if let _timestamp {
+        return _timestamp
+      } else {
+        return .now
+      }
     }
+    set {
+      _timestamp = newValue
+    }
+  }
 }

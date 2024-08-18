@@ -62,6 +62,8 @@
 		CD51AF722C708407007CE0B9 /* poc_SwiftData_Counter_w_Widget_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_SwiftData_Counter_w_Widget_Widget.swift; sourceTree = "<group>"; };
 		CD51AF762C708409007CE0B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD51AF782C708409007CE0B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD51AF822C71DED7007CE0B9 /* poc-SwiftData_Counter_w_Widget_WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "poc-SwiftData_Counter_w_Widget_WidgetExtension.entitlements"; sourceTree = "<group>"; };
+		CD51AF832C71E0B8007CE0B9 /* poc-SwiftData-Counter-w-Widget-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "poc-SwiftData-Counter-w-Widget-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		CD51AF462C708068007CE0B9 = {
 			isa = PBXGroup;
 			children = (
+				CD51AF822C71DED7007CE0B9 /* poc-SwiftData_Counter_w_Widget_WidgetExtension.entitlements */,
 				CD51AF512C708068007CE0B9 /* poc-SwiftData_Counter_w_Widget */,
 				CD51AF6F2C708407007CE0B9 /* poc-SwiftData_Counter_w_Widget_Widget */,
 				CD51AF6A2C708407007CE0B9 /* Frameworks */,
@@ -106,6 +109,7 @@
 		CD51AF512C708068007CE0B9 /* poc-SwiftData_Counter_w_Widget */ = {
 			isa = PBXGroup;
 			children = (
+				CD51AF832C71E0B8007CE0B9 /* poc-SwiftData-Counter-w-Widget-Info.plist */,
 				CD51AF622C70818A007CE0B9 /* poc-SwiftData_Counter_w_Widget.entitlements */,
 				CD51AF522C708068007CE0B9 /* poc_SwiftData_Counter_w_WidgetApp.swift */,
 				CD51AF542C708068007CE0B9 /* ContentView.swift */,
@@ -406,6 +410,7 @@
 				DEVELOPMENT_TEAM = T4E7YEW565;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "poc-SwiftData-Counter-w-Widget-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -437,6 +442,7 @@
 				DEVELOPMENT_TEAM = T4E7YEW565;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "poc-SwiftData-Counter-w-Widget-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -460,6 +466,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "poc-SwiftData_Counter_w_Widget_WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T4E7YEW565;
@@ -487,6 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "poc-SwiftData_Counter_w_Widget_WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T4E7YEW565;
