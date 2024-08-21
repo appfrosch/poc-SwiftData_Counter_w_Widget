@@ -24,8 +24,7 @@ struct LatestItemProvider: TimelineProvider {
   }
 
   func getTimeline(in context: Context, completion: @escaping (Timeline<LatestItemEntry>) -> Void) {
-    var fetchDescriptor = FetchDescriptor(sortBy: [SortDescriptor(\Item._timestamp, order: .reverse)])
-    let now = Date.now
+    let fetchDescriptor = FetchDescriptor(sortBy: [SortDescriptor(\Item._timestamp, order: .reverse)])
     let modelContext = ModelContext(DataModel.shared.modelContainer)
     var latestItem: Item? = nil
     if let items = try? modelContext.fetch(fetchDescriptor) {
@@ -43,10 +42,14 @@ struct WidgetEntryView: View {
   @State var entry: LatestItemProvider.Entry
 
   var body: some View {
-    if let item = entry.item {
-      Text(item.timestamp.formatted())
-    } else {
-      Text("No items yet")
+    HStack {
+      if let item = entry.item {
+        Text(item.timestamp.formatted())
+      } else {
+        Text("No items yet")
+      }
+
+      Button("Add item", systemImage: "plus", intent: AddNewItemIntent())
     }
   }
 }
@@ -59,7 +62,7 @@ struct poc_SwiftData_Counter_w_Widget_Widget: Widget {
       kind: kind,
       provider: LatestItemProvider()) { entry in
         WidgetEntryView(entry: entry)
-          .containerBackground(.secondary, for: .widget)
+          .containerBackground(.tertiary, for: .widget)
       }
       .supportedFamilies([.systemMedium])
       .configurationDisplayName("Latest Item Widget")
