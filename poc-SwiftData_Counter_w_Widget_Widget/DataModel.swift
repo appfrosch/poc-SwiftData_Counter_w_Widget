@@ -6,6 +6,8 @@ An actor that provides a SwiftData model container for the whole app and widget,
  and implements actor-isolated tasks like SwiftData history processing.
 */
 
+//Source: sample project downloaded [here](https://developer.apple.com/documentation/coredata/adopting_swiftdata_for_a_core_data_app)
+
 import SwiftUI
 import SwiftData
 

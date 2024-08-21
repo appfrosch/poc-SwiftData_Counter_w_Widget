@@ -13,6 +13,7 @@ struct AddNewItemIntent: AppIntent {
   func perform() async throws -> some IntentResult {
     print("AddNewItemIntent button tapped")
     let newItem = Item(timestamp: Date())
+    //https://stackoverflow.com/questions/78895555/non-sendable-type-in-implicitly-asynchronous-access-warning-when-accessing-the
     await DataModel.shared.modelContainer.mainContext.insert(newItem)
     return .result()
   }
