@@ -20,6 +20,8 @@
 		CD51AF7B2C708409007CE0B9 /* poc-SwiftData_Counter_w_Widget_WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CD51AF692C708407007CE0B9 /* poc-SwiftData_Counter_w_Widget_WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CD51AF802C7084A0007CE0B9 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD51AF632C708284007CE0B9 /* AppIntent.swift */; };
 		CD51AF812C70852D007CE0B9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD51AF562C708068007CE0B9 /* Item.swift */; };
+		CD51AF852C71F5C8007CE0B9 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD51AF842C71F5C8007CE0B9 /* DataModel.swift */; };
+		CD51AF862C71F5D3007CE0B9 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD51AF842C71F5C8007CE0B9 /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,7 @@
 		CD51AF782C708409007CE0B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD51AF822C71DED7007CE0B9 /* poc-SwiftData_Counter_w_Widget_WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "poc-SwiftData_Counter_w_Widget_WidgetExtension.entitlements"; sourceTree = "<group>"; };
 		CD51AF832C71E0B8007CE0B9 /* poc-SwiftData-Counter-w-Widget-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "poc-SwiftData-Counter-w-Widget-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CD51AF842C71F5C8007CE0B9 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,7 @@
 				CD51AF702C708407007CE0B9 /* poc_SwiftData_Counter_w_Widget_WidgetBundle.swift */,
 				CD51AF722C708407007CE0B9 /* poc_SwiftData_Counter_w_Widget_Widget.swift */,
 				CD51AF632C708284007CE0B9 /* AppIntent.swift */,
+				CD51AF842C71F5C8007CE0B9 /* DataModel.swift */,
 				CD51AF762C708409007CE0B9 /* Assets.xcassets */,
 				CD51AF782C708409007CE0B9 /* Info.plist */,
 			);
@@ -251,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD51AF552C708068007CE0B9 /* ContentView.swift in Sources */,
+				CD51AF852C71F5C8007CE0B9 /* DataModel.swift in Sources */,
 				CD51AF572C708068007CE0B9 /* Item.swift in Sources */,
 				CD51AF532C708068007CE0B9 /* poc_SwiftData_Counter_w_WidgetApp.swift in Sources */,
 			);
@@ -260,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD51AF862C71F5D3007CE0B9 /* DataModel.swift in Sources */,
 				CD51AF812C70852D007CE0B9 /* Item.swift in Sources */,
 				CD51AF712C708407007CE0B9 /* poc_SwiftData_Counter_w_Widget_WidgetBundle.swift in Sources */,
 				CD51AF732C708407007CE0B9 /* poc_SwiftData_Counter_w_Widget_Widget.swift in Sources */,

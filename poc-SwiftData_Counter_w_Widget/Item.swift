@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 final class Item {
-  private var _timestamp: Date?
+  private(set) var _timestamp: Date?
 
   init(
     timestamp: Date

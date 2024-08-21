@@ -7,6 +7,7 @@
 
 import WidgetKit
 import SwiftUI
+import SwiftData
 
 struct LatestItemEntry: TimelineEntry {
     let date: Date
@@ -23,6 +24,18 @@ struct LatestItemProvider: TimelineProvider {
   }
 
   func getTimeline(in context: Context, completion: @escaping (Timeline<LatestItemEntry>) -> Void) {
+    var fetchDescriptor = FetchDescriptor(sortBy: [SortDescriptor(\Item._timestamp, order: .reverse)])
+    let now = Date.now
+    let modelContext = ModelContext(DataModel.shared.modelContainer)
+    if let items = try? modelContext.fetch(fetchDescriptor) {
+      if let item = items.first {
+        let itemEntry = LatestItemEntry(date: .now, item: item)
+        let timeline = Timeline(entries: [itemEntry], policy: .never)
+        completion(timeline)
+        return
+      }
+    }
+
     let timeline = Timeline(entries: [LatestItemEntry(date: .now, item: Item(timestamp: .now))], policy: .never)
     completion(timeline)
   }
@@ -46,7 +59,7 @@ struct poc_SwiftData_Counter_w_Widget_Widget: Widget {
         WidgetEntryView(entry: entry)
           .containerBackground(.secondary, for: .widget)
       }
-      .supportedFamilies([.systemSmall])
+      .supportedFamilies([.systemMedium])
       .configurationDisplayName("Latest Item Widget")
       .description("Shows the latest item.")
   }
