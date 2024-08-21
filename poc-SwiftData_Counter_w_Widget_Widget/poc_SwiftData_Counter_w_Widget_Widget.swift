@@ -11,7 +11,7 @@ import SwiftData
 
 struct LatestItemEntry: TimelineEntry {
     let date: Date
-    var item: Item
+    var item: Item?
 }
 
 struct LatestItemProvider: TimelineProvider {
@@ -27,16 +27,14 @@ struct LatestItemProvider: TimelineProvider {
     var fetchDescriptor = FetchDescriptor(sortBy: [SortDescriptor(\Item._timestamp, order: .reverse)])
     let now = Date.now
     let modelContext = ModelContext(DataModel.shared.modelContainer)
+    var latestItem: Item? = nil
     if let items = try? modelContext.fetch(fetchDescriptor) {
       if let item = items.first {
-        let itemEntry = LatestItemEntry(date: .now, item: item)
-        let timeline = Timeline(entries: [itemEntry], policy: .never)
-        completion(timeline)
-        return
+        latestItem = item
       }
     }
-
-    let timeline = Timeline(entries: [LatestItemEntry(date: .now, item: Item(timestamp: .now))], policy: .never)
+    let itemEntry = LatestItemEntry(date: .now, item: latestItem)
+    let timeline = Timeline(entries: [itemEntry], policy: .never)
     completion(timeline)
   }
 }
@@ -45,7 +43,11 @@ struct WidgetEntryView: View {
   @State var entry: LatestItemProvider.Entry
 
   var body: some View {
-    Text(entry.item.timestamp.formatted())
+    if let item = entry.item {
+      Text(item.timestamp.formatted())
+    } else {
+      Text("No items yet")
+    }
   }
 }
 
